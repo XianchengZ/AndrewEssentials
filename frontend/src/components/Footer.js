@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <Container>
         <Row>
-          <Col classname="py-3" style={{ textAlign: 'center' }}>
+          <Col className="py-3" style={{ textAlign: 'center' }}>
             Copyright &copy; AndrewEssentials
           </Col>
         </Row>
