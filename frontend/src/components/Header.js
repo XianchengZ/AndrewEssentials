@@ -9,7 +9,6 @@ const Header = () => {
           <Navbar.Brand href="/">AndrewEssential</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            {/* <Nav className="ml-auto"> */}
             <Nav className="justify-content-end" style={{ width: '100%' }}>
               <Nav.Link href="/cart">
                 <i className="fas fa-shopping-cart"></i>
