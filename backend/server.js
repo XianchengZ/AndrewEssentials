@@ -17,7 +17,7 @@ app.use(express.json()); // accept json object inside body
 
 app.get('/', (req, res) => {
   res.send('API is running...');
-});
+}); // Testing
 
 app.use('/api/products', productRouters);
 app.use('/api/users', userRouters);
