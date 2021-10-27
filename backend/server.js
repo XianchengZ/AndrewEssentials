@@ -20,8 +20,8 @@ app.get('/', (req, res) => {
 	res.send('API is running...');
 }); // Testing
 
-app.use('/api/products', productRouters);
 app.use('/api/orders', orderRouters);
+app.use('/api/products', productRouters);
 app.use('/api/users', userRouters);
 
 app.use(notFound);
