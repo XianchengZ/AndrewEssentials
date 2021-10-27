@@ -6,6 +6,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 import productRouters from './routes/productRoutes.js';
 import userRouters from './routes/userRoutes.js';
+import orderRouters from './routes/orderRoutes.js';
 
 dotenv.config();
 
@@ -16,10 +17,11 @@ const app = express();
 app.use(express.json()); // accept json object inside body
 
 app.get('/', (req, res) => {
-  res.send('API is running...');
+	res.send('API is running...');
 }); // Testing
 
 app.use('/api/products', productRouters);
+app.use('/api/orders', orderRouters);
 app.use('/api/users', userRouters);
 
 app.use(notFound);
@@ -28,9 +30,4 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-  )
-);
+app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
